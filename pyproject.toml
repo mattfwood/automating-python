@@ -1,0 +1,12 @@
+[tool.poetry]
+name = "python-automation"
+version = "0.1.0"
+description = ""
+authors = ["Matt Wood <matt@cratebind.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.6"
+requests = "^2.24.0"
+Click = "^7.1.2"
+pyautogui = "^0.9.50"
+inquirer = "^2.7.0"

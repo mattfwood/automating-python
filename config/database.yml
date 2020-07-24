@@ -1,0 +1,22 @@
+default: &default
+  adapter: postgis
+  encoding: unicode
+  # For details on connection pooling, see Rails configuration guide
+  # http://guides.rubyonrails.org/configuring.html#database-pooling
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  port: 5432
+
+development:
+  <<: *default
+  database: destin_florida_development
+
+
+test:
+  <<: *default
+  database: destin_florida_test
+
+production:
+  <<: *default
+  database: destin_florida_production
+  username: destin_florida
+  password: <%= ENV['RELOOLOGY_DATABASE_PASSWORD'] %>
